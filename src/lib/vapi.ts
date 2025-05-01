@@ -1,3 +1,5 @@
 import Vapi from "@vapi-ai/web";
 
-export const vapi = new Vapi(process.env.VAPI_API_KEY as string);
+const vapi = new Vapi(process.env.NEXT_PUBLIC_VAPI_API_KEY!);
+
+export { vapi };
