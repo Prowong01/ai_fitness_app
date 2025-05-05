@@ -28,35 +28,33 @@ const Navbar = () => {
         </Link>
 
         <nav className="hidden md:flex items-center gap-5 flex-grow justify-end">
-          {
-            isSignedIn ? (
-              <>
-                <Link
-                  href="/"
-                  className="flex items-center gap-1.5 text-sm hover:text-primary transition-colors"
-                >
-                  <HomeIcon size={16} />
-                  <span>Home</span>
-                </Link>
+          {isSignedIn ? (
+            <>
+              <Link
+                href="/"
+                className="flex items-center gap-1.5 text-sm hover:text-primary transition-colors"
+              >
+                <HomeIcon size={16} />
+                <span>Home</span>
+              </Link>
 
-                <Link
-                  href="/generate-program"
-                  className="flex items-center gap-1.5 text-sm hover:text-primary transition-colors"
-                >
-                  <DumbbellIcon size={16} />
-                  <span>Generate</span>
-                </Link>
+              <Link
+                href="/generate-program"
+                className="flex items-center gap-1.5 text-sm hover:text-primary transition-colors"
+              >
+                <DumbbellIcon size={16} />
+                <span>Generate</span>
+              </Link>
 
-                <Link
-                  href="/profile"
-                  className="flex items-center gap-1.5 text-sm hover:text-primary transition-colors"
-                >
-                  <UserIcon size={16} />
-                  <span>Profile</span>
-                </Link>
-              </>
-            ) : null /* Don't show anything in the center nav when logged out */
-          }
+              <Link
+                href="/profile"
+                className="flex items-center gap-1.5 text-sm hover:text-primary transition-colors"
+              >
+                <UserIcon size={16} />
+                <span>Profile</span>
+              </Link>
+            </>
+          ) : null}
         </nav>
 
         {/* Auth Buttons / User Button - Always visible */}
