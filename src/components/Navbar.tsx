@@ -4,7 +4,7 @@ import { SignInButton, SignUpButton, UserButton, useUser } from "@clerk/nextjs";
 import { DumbbellIcon, HomeIcon, UserIcon, ZapIcon } from "lucide-react";
 import Link from "next/link";
 import { Button } from "./ui/button";
-import { MobileSidebar } from "./MobileSidebar"; // Import the MobileSidebar
+import { MobileSidebar } from "./MobileSidebar";
 
 const Navbar = () => {
   const { isSignedIn } = useUser();
@@ -12,7 +12,6 @@ const Navbar = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/60 backdrop-blur-md border-b border-border py-3">
       <div className="container mx-auto flex items-center justify-between gap-4 p-1">
-        {/* Mobile Sidebar Trigger - Appears only on small screens */}
         <div className="md:hidden">
           <MobileSidebar />
         </div>
@@ -57,18 +56,12 @@ const Navbar = () => {
           ) : null}
         </nav>
 
-        {/* Auth Buttons / User Button - Always visible */}
         <div className="flex items-center gap-3">
           {isSignedIn ? (
             <>
-              {/* Optional: Move Get Started button here if desired on all screen sizes */}
-              {/* <Button asChild size="sm" className="hidden sm:flex">
-                 <Link href="/generate-program">Get Started</Link>
-               </Button> */}
-              <UserButton afterSignOutUrl="/" />
+              <UserButton />
             </>
           ) : (
-            // Show Sign In and Sign Up buttons on all screen sizes when logged out
             <>
               <SignInButton>
                 <Button

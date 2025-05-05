@@ -10,12 +10,10 @@ import {
 } from "@/components/ui/sheet";
 
 export function MobileSidebar() {
-  // Update these links to match your main navigation
   const navLinks = [
     { href: "/", label: "Home" },
     { href: "/generate-program", label: "Generate" },
     { href: "/profile", label: "Profile" },
-    // Add other links if needed, e.g., a link to '/plans' if you have that page
   ];
 
   return (
@@ -23,7 +21,7 @@ export function MobileSidebar() {
       <SheetTrigger asChild>
         <Button variant="outline" size="icon" className="md:hidden">
           {" "}
-          <Menu className="h-6 w-6" /> {/* Slightly larger icon */}
+          <Menu className="h-6 w-6" />
           <span className="sr-only">Toggle Navigation Menu</span>
         </Button>
       </SheetTrigger>
